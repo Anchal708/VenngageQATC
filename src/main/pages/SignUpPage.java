@@ -2,15 +2,20 @@ public class SignUpPage {
 	
 	private Selenium selenium;
 	
-	// Add XPaths here
-	private static final String firstNameInput = "/html/body/div[1]/div/div/div/div[2]/div[2]/form/div[1]/div/div[1]/input";
+
+	private static final String firstNameInput = "//input[@id='user_first_name']";
+	private static final String lastNameInput = "//input[@id='user_last_name']";
+	private static final String EmailInput = "//input[@id='user_email']";
+	private static final String PasswordInput = "//input[@id='user_password']";
 	
 	
-	public SignUpPage(){
-		this.selenium = Selenium();
+	public Account SignUpPage(){
+		selenium.sendKeys();
+		selenium.clickByXpath();
+		return new Account();
+		
 	}
 	
-	// Create a function that takes an Account and simulates signing up using Selenium actions. (Refer to Selenium.java)
 	
 	
 }
